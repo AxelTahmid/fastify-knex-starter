@@ -1,73 +1,77 @@
 {
-  "env": {
-    "node": true,
-    "es2021": true
-  },
-  "plugins": ["standard", "prettier", "unused-imports"],
-  "extends": [
-    "standard",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:node/recommended",
-    "plugin:promise/recommended"
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest"
-  },
-  "rules": {
-    "unused-imports/no-unused-vars": [
-      "error",
-      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-    ],
-    "newline-per-chained-call": 1,
-    "strict": ["error", "global"],
-    "no-var": "error",
-    "curly": "off",
-    "semi": ["error"],
-    "no-tabs": ["off", "always"],
-    "new-cap": "off",
-    "require-jsdoc": "off",
-    "no-param-reassign": [
-      "error",
-      {
-        "props": true
-      }
-    ],
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "variables": false
-      }
-    ],
-    "no-console": [
-      "error",
-      {
-        "allow": ["time", "timeEnd"]
-      }
-    ],
-    "comma-dangle": ["error", "never"],
-    "max-len": [
-      "error",
-      {
-        "code": 125,
-        "ignoreComments": true,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
-      }
-    ],
-    "brace-style": [
-      "error",
-      "1tbs",
-      {
-        "allowSingleLine": true
-      }
-    ],
-    "complexity": ["warn", 6],
-    "import/no-extraneous-dependencies": 0,
-    "require-atomic-updates": 0
-  }
+	"env": {
+		"commonjs": true,
+		"es2021": true,
+		"node": true
+	},
+	"plugins": ["unused-imports"],
+	"extends": "standard",
+	"parserOptions": {
+		"ecmaVersion": "latest"
+	},
+	"rules": {
+		"unused-imports/no-unused-vars": [
+			"error",
+			{
+				"vars": "all",
+				"varsIgnorePattern": "^_",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"newline-per-chained-call": 1,
+		"strict": ["error", "global"],
+		"no-var": "error",
+		"curly": "off",
+		"camelcase": "off",
+		// "indent": ["error", "tab"],
+		"space-before-function-paren": "off",
+		"indent": ["off"],
+		"linebreak-style": ["warn", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "never"],
+		"no-tabs": ["off", "always"],
+		"new-cap": "off",
+		"require-jsdoc": "off",
+		"no-param-reassign": [
+			"error",
+			{
+				"props": false
+			}
+		],
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": false,
+				"variables": false
+			}
+		],
+		"no-console": [
+			"error",
+			{
+				"allow": ["time", "timeEnd"]
+			}
+		],
+		"comma-dangle": ["error", "never"],
+		"max-len": [
+			"error",
+			{
+				"code": 85,
+				"ignoreComments": true,
+				"ignoreTrailingComments": true,
+				"ignoreUrls": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+			}
+		],
+		"brace-style": [
+			"error",
+			"1tbs",
+			{
+				"allowSingleLine": true
+			}
+		],
+		"complexity": ["warn", 10]
+	}
 }

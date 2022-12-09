@@ -1,18 +1,18 @@
 {
-    "delay": "500",
-    "restartable": "rs",
-    "ignore": [
-        ".git",
-        ".github",
-        ".vscode",
-        ".kubernetes",
-        "node_modules/**/node_modules",
-        "database",
-        "Dockerfile"
-    ],
-    "verbose": true,
-    "execMap": {
-        "js": "node"
-    },
-    "ext": "js,json"
+	"delay": "500",
+	"restartable": "rs",
+	"ignore": [
+		".git",
+		".github",
+		".vscode",
+		".kubernetes",
+		"node_modules/**/node_modules",
+		"database",
+		"Dockerfile"
+	],
+	"verbose": true,
+	"execMap": {
+		"js": "node"
+	},
+	"ext": "js,json"
 }
